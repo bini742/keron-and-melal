@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f7cae0">
+    <meta name="description" content="A little interactive birthday wish with candles to blow out.">
+    <title>Make a Wish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="birthday-card" aria-labelledby="birthday-title">
+      <p class="eyebrow">Happy birthday, <span class="name" id="name">you</span>!</p>
+      <h1 id="birthday-title">Blow Out The Candles</h1>
+      <p class="subtitle" id="message">Make a wish, then blow toward your microphone.</p>
+
+      <section class="cake-stage" aria-label="Five lit birthday candles on a cake">
+        <div class="cake" role="img" aria-label="Chocolate birthday cake with pink icing">
+          <div class="icing"><i></i><i></i><i></i></div>
+          <div class="cake-body"><span></span><span></span></div>
+          <div class="plate"></div>
+        </div>
+        <svg class="candles" viewBox="0 0 200 105" aria-hidden="true">
+          <g id="candles"></g>
+        </svg>
+      </section>
+
+      <button class="mic-button" id="microphone" type="button" aria-describedby="hint">
+        <span aria-hidden="true"></span>
+        <span id="button-label">Allow Access to Mic</span>
+      </button>
+      <p class="hint" id="hint" role="status" aria-live="polite">Your microphone is only used in this browser to detect a blow.</p>
+      <button class="text-button" id="wish-button" type="button">No mic? Celebrate anyway</button>
+
+    </main>
+
+    <canvas id="confetti" aria-hidden="true"></canvas>
+    <script src="script.js" defer></script>
+  </body>
+</html>
